@@ -49,8 +49,8 @@ modules:
       - echo "Build Game"
       - make "SRC_C_DIR=src/srcgame src/srcgame/scoresubmit" "CFLAGS_EXTRA=`pkg-config --cflags SDL2_gfx`" "LDFLAGS_EXTRA=`pkg-config --libs SDL2_gfx`" WINDOWSCALE=2 SCREENRESX=320 SCREENRESY=240
       - mv Source /app/game
-      - mkdir -p /app/usr/bin
-      - mv ./formula1_playdate /app/usr/bin
+      - mkdir -p /app/bin
+      - mv ./formula1_playdate /app/bin
     sources:
       - type: git
         branch: main
