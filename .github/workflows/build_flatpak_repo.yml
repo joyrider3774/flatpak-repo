@@ -16,7 +16,7 @@ jobs:
       max-parallel: 1
       matrix:
         manifest:
-          - build-aux/com.github.joyrider3774.formula1_playdate.yml
+          - build-aux/io.github.joyrider3774.formula_1_game__watch_playdate.yml
           - build-aux/io.github.joyrider3774.retrotime.yml
       fail-fast: true
 
