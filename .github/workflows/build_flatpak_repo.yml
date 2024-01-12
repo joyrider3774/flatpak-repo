@@ -12,14 +12,6 @@ jobs:
     permissions:
       contents: write
 
-#    strategy:
-#      max-parallel: 1
-#      matrix:
-#        manifest:
-#          - build-aux/io.github.joyrider3774.formula_1_game__watch_playdate.yml
-#          - build-aux/io.github.joyrider3774.retrotime.yml
-#      fail-fast: true
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,7 +33,6 @@ jobs:
         id: build
         uses: andyholmes/flatter@main
         with:
-          #files: ${{ matrix.manifest }}
           files: |
             build-aux/io.github.joyrider3774.formula_1_game__watch_playdate.yml
             build-aux/io.github.joyrider3774.retrotime.yml
@@ -51,6 +42,7 @@ jobs:
           upload-bundles: true
           upload-pages-includes: |
             index.html
+            joyrider3774.flatpakrepo
             
   deploy:
     name: Deploy
