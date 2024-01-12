@@ -44,6 +44,7 @@ jobs:
           files: ${{ matrix.manifest }}
           arch: x86_64
           gpg-sign: ${{ steps.gpg.outputs.fingerprint }}
+          upload-pages-artifact: true
           upload-bundles: true
           upload-pages-includes: |
             index.html
