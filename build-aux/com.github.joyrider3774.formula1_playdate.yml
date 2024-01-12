@@ -41,14 +41,16 @@ modules:
       - mv ./game/src ./pd_api/src/srcgame
       - cp -Rf ./game/Source/. ./pd_api/Source
       - cp -Rf ./pd_api/. ./
-      - echo "Creaing game.sh"
-      - echo "#!/bin/bash" > "./Source/game.sh"
-      - echo "cd /app/game" >> "./Source/game.sh"
-      - echo "./game -f \"\$@\"" >> "./Source/game.sh"
-      - chmod +x "./Source/game.sh"
+      - echo "Creating formula1_playdate launcher"
+      - echo "#!/bin/bash" > "./formula1_playdate"
+      - echo "cd /app/game" >> "./formula1_playdate"
+      - echo "./game -f \"\$@\"" >> "./formula1_playdate"
+      - chmod +x "./formula1_playdate"
       - echo "Build Game"
       - make "SRC_C_DIR=src/srcgame src/srcgame/scoresubmit" "CFLAGS_EXTRA=`pkg-config --cflags SDL2_gfx`" "LDFLAGS_EXTRA=`pkg-config --libs SDL2_gfx`" WINDOWSCALE=2 SCREENRESX=320 SCREENRESY=240
       - mv Source /app/game
+      - mkdir -p /app/usr/bin
+      - mv ./formula1_playdate app/usr/bin
     sources:
       - type: git
         branch: main
