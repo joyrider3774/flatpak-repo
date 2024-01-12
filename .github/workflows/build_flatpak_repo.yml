@@ -43,6 +43,7 @@ jobs:
           upload-pages-includes: |
             index.html
             joyrider3774.flatpakrepo
+            icon.svg
             
   deploy:
     name: Deploy
