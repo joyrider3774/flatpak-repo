@@ -1,7 +1,7 @@
 [Flatpak Repo]
 Title=joyrider3774
-Url=https://github.com/joyrider3774/flatpak-repo/
-Homepage=https://github.com/joyrider3774/flatpak-repo/
+Url=https://joyrider3774.github.io/flatpak-repo
+Homepage=https://joyrider3774.github.io/flatpak-repo
 Comment=Joyrider3774's flatpak repository
 Description=flatpak repository containing Joyrider3774's creations
 Icon=https://github.com/joyrider3774/flatpak-repo/icon.svg
