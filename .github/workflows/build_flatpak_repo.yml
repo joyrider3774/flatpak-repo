@@ -37,6 +37,7 @@ jobs:
             build-aux/io.github.joyrider3774.formula_1_game__watch_playdate.yml
             build-aux/io.github.joyrider3774.retrotime.yml
             build-aux/io.github.joyrider3774.blockdude_playdate.yml
+            build-aux/io.github.joyrider3774.puztrix_playdate.yml
           arch: x86_64
           gpg-sign: ${{ steps.gpg.outputs.fingerprint }}
           upload-pages-artifact: true
